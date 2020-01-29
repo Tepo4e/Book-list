@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['booksList'])) {
+        $_SESSION['booksList'] = array();
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +22,13 @@
 
         <a class="button" href="addBooks.php">Add title</a>
 
-        <ul class="Books-list">
-            
+        <ul class="books-list">
+            <?php
+                foreach ($_SESSION['booksList'] as $bookName) {
+                    echo "<li>$bookName</li>";
+                }
+            ?>
         </ul>
-
     </div>
 </body>
 </html>
