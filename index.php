@@ -20,7 +20,9 @@
 <div class="content">
         <h1>Book lovers</h1>
 
-        <a class="button" href="addBooks.php">Add title</a>
+        <a class="button" href="addBooksToRead.php">Add a book to read</a>
+        <br>
+        <a class="button" href="addBooksAlreadyRead.php">Add a book you already read</a>
 
         <ul class="books-list">
             <?php
