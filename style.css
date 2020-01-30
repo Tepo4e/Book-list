@@ -11,9 +11,8 @@ body {
     text-align: left;
 }
 .already-read {
-    width: 680px;
-    margin: auto;
-    text-align: right;
+    margin: initial;
+    text-align: left;
 }
 
 .books-list {

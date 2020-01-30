@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="content">
-        <h1>Books to read</h1>
+        <h1>Book lovers</h1>
 
         <a class="button" href="addBooks.php">Add title</a>
 
