@@ -10,12 +10,6 @@ body {
     margin: auto;
     text-align: left;
 }
-.already-read {
-    width: 1200px;
-    margin: auto;
-    text-align: left;
-}
-
 .books-list {
     list-style: none;
 }
@@ -28,4 +22,9 @@ body {
 
 .button:hover {
     text-decoration: underline;
+}
+.already-read {
+    width: 1200px;
+    margin: auto;
+    text-align: right;
 }
