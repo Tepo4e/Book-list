@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['booksList'])) {
+        $_SESSION['booksList'] = array();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +15,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="to-read">
+    <div class="read">
         <h1>Want to read</h1>
         <h2>Аdd a book you want to read </h2>
         <form action="postBooks.php" method="post"> 
             <label for="new-book-title">Book Title</label>
-            <input type="text" name="newBook" id="new-book-title" placeholder="Game of Thrones">
+            <input type="text" name="newBook" id="new-book-title" placeholder="Inferno">
             <input type="submit" value="Add">
-        </form>
+            </form>
     </div>
+        <ul class="books-list">
+             <?php
+                foreach ($_SESSION['booksList'] as $bookName) {
+                    echo "<li>$bookName</li>";
+                }
+            ?>
+        </ul>
     </body>
 </html>
