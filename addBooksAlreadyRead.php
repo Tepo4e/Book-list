@@ -19,7 +19,7 @@
     <div class="read">
         <h1>Already read</h1>
         <h2>Аdd a book you already read </h2>
-        <form action="postBook2.php" method="post"> 
+        <form action="postToAlreadyReadBook.php" method="post"> 
             <label for="new-book-title">Book Title</label>
             <input type="text" name="newBook2" id="new-book-title" placeholder="Game of Thrones">
             <input type="submit" value="Add">

@@ -18,7 +18,7 @@
     <div class="read">
         <h1>Want to read</h1>
         <h2>Аdd a book you want to read </h2>
-        <form action="postBooks.php" method="post"> 
+        <form action="postToReadBook.php" method="post"> 
             <label for="new-book-title">Book Title</label>
             <input type="text" name="newBook" id="new-book-title" placeholder="Inferno">
             <input type="submit" value="Add">
