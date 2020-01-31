@@ -2,10 +2,11 @@
 <?php
     session_start();
 
-    if (!isset($_SESSION['booksList2'])) {
-        $_SESSION['booksList2'] = array();
+    if (!isset($_SESSION['bookList2'])) {
+        $_SESSION['bookList2'] = array();
     }
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,16 +19,16 @@
     <div class="read">
         <h1>Already read</h1>
         <h2>Аdd a book you already read </h2>
-        <form action="postBooks.php" method="post"> 
+        <form action="postBook2.php" method="post"> 
             <label for="new-book-title">Book Title</label>
             <input type="text" name="newBook2" id="new-book-title" placeholder="Game of Thrones">
             <input type="submit" value="Add">
         </form>
     </div>
-    <?php
-                foreach ($_SESSION['booksList2'] as $bookName2) {
-                    echo "<li>$bookName2</li>";
-                }
-            ?>
+        <?php
+            foreach ($_SESSION['bookList2'] as $bookName2) {
+            echo "<li>$bookName2</li>";
+            }
+        ?>
     </body>
 </html>

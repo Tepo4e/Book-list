@@ -1,11 +1,11 @@
 <?php
     session_start();
 
-    if (!isset($_SESSION['booksList'])) {
-        $_SESSION['booksList'] = array();
+    if (!isset($_SESSION['WishList'])) {
+        $_SESSION['WishList'] = array();
     }
-    if (!isset($_SESSION['booksList2'])) {
-        $_SESSION['booksList2'] = array();
+    if (!isset($_SESSION['bookList2'])) {
+        $_SESSION['bookList2'] = array();
     }
 ?>
 <!DOCTYPE html>
@@ -26,19 +26,26 @@
         <a class="button" href="addBooksAlreadyRead.php">Add a book you already read</a>
     </div>
     <div class="to-read">
-        <h1>Book to read</h1>
+        <h2>Book to read</h2>
         <?php
-                foreach ($_SESSION['booksList'] as $bookName) {
-                    echo "<li>$bookName</li>";
-                }
-            ?>
-       <div class="Already-read">
-        <h1>Already read books</h1>
+            foreach ($_SESSION['WishList'] as $bookName) {
+                echo "<li>
+                         <form action=\"moveBookToAlreadyRead.php\" method=\"GET\">
+                                $bookName
+                                <button class=\"done-button\">done</button>
+                                <input type=\"hidden\" name=\"book\" value=\"$bookName\">
+                            </form>    
+                        </li>";
+            }
+        ?>
+
+    <div class="already-read">
+        <h2>Already read books</h2>
        <?php
-                foreach ($_SESSION['booksList2'] as $bookName2) {
-                    echo "<li>$bookName2</li>";
-                }
-            ?>
+             foreach ($_SESSION['bookList2'] as $bookName2) {
+                echo "<li>$bookName2</li>";
+            }
+        ?>
     </div>
 </body>
 </html>

@@ -36,5 +36,22 @@ input {
 }
 li {
     list-style: none;
-    text-align: center;
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+    color: bisque;
+}
+
+form {
+    text-align: left;
+}
+
+.already-read{
+    text-align: left;
+    color: bisque;
+}
+.to-read {
+    text-align: left;
 }

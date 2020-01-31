@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    if (!isset($_SESSION['booksList'])) {
-        $_SESSION['booksList'] = array();
+    if (!isset($_SESSION['WishList'])) {
+        $_SESSION['WishList'] = array();
     }
 ?>
 <!DOCTYPE html>
@@ -22,14 +22,14 @@
             <label for="new-book-title">Book Title</label>
             <input type="text" name="newBook" id="new-book-title" placeholder="Inferno">
             <input type="submit" value="Add">
-            </form>
+        </form>
     </div>
         <ul class="books-list">
              <?php
-                foreach ($_SESSION['booksList'] as $bookName) {
+                foreach ($_SESSION['WishList'] as $bookName) {
                     echo "<li>$bookName</li>";
                 }
             ?>
         </ul>
-    </body>
+</body>
 </html>
